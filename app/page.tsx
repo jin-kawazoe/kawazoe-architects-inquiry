@@ -14,7 +14,7 @@ export default function Home() {
           <img
             src={assetPath("/images/hero-bg.jpg")}
             alt=""
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-zinc-950/30" />
