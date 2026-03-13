@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { assetPath } from "./lib/assetPath";
 
 export default function Home() {
   return (
@@ -223,33 +224,33 @@ export default function Home() {
               {[
                 {
                   category: "住宅",
-                  title: "木造2階建て住宅",
-                  detail: "東京都 / 延床90㎡",
-                  num: "01",
+                  title: "AK MODEL HOUSE",
+                  detail: "香川・さぬき市 / 平屋コートハウス",
+                  image: "/images/works/ak-model-house.jpg",
+                  href: "https://www.kawazoe-architects.com/project/house/ak-model-house/ak-model-house.html",
                 },
                 {
                   category: "店舗",
-                  title: "カフェ&ギャラリー",
-                  detail: "香川県 / 延床120㎡",
-                  num: "02",
+                  title: "BONO CURRY STAND",
+                  detail: "香川・庵治 / 工場転用",
+                  image: "/images/works/bono-curry-stand.jpg",
+                  href: "https://www.kawazoe-architects.com/project/shop/bono-curry-stand/bono-curry-stand.html",
                 },
                 {
-                  category: "リノベ",
-                  title: "築40年 戸建てリノベ",
-                  detail: "大阪府 / 延床80㎡",
-                  num: "03",
+                  category: "貸別荘",
+                  title: "RELUVILLA",
+                  detail: "兵庫・淡路島西海岸",
+                  image: "/images/works/reluvilla.jpg",
+                  href: "https://www.kawazoe-architects.com/project/rental-villa/reluvilla/reluvilla.html",
                 },
               ].map((work, i) => (
-                <Link href="/works/" key={i} className="group block">
+                <a href={work.href} key={i} target="_blank" rel="noopener noreferrer" className="group block">
                   <div className="aspect-[4/3] bg-zinc-800 mb-4 overflow-hidden relative">
-                    <div className="w-full h-full flex items-center justify-center group-hover:bg-zinc-700 transition-colors duration-500">
-                      <span
-                        className="text-[60px] font-light text-zinc-700 leading-none"
-                        style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-                      >
-                        {work.num}
-                      </span>
-                    </div>
+                    <img
+                      src={assetPath(work.image)}
+                      alt={work.title}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-zinc-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-end p-6">
                       <div>
@@ -271,7 +272,7 @@ export default function Home() {
                   <p className="text-sm font-light text-white/60 group-hover:text-white transition-colors duration-300">
                     {work.title}
                   </p>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -285,10 +286,12 @@ export default function Home() {
                 <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-8">
                   ABOUT
                 </p>
-                <div className="aspect-[3/4] bg-zinc-100 flex items-center justify-center">
-                  <p className="text-[9px] text-zinc-300 tracking-[0.3em]">
-                    PHOTO
-                  </p>
+                <div className="aspect-[3/4] bg-zinc-100 overflow-hidden relative">
+                  <img
+                    src={assetPath("/images/profile/jin-kawazoe.jpg")}
+                    alt="河添 甚 | 一級建築士"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
               </div>
 

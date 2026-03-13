@@ -29,12 +29,23 @@ export default function ContactPage() {
     setError("");
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          subject: `【新規問い合わせ】${formData.type} - ${formData.name}様`,
+          from_name: "KAWAZOE ARCHITECTS 集客サイト",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || "未記入",
+          type: formData.type,
+          message: formData.message || "未記入",
+          botcheck: "",
+        }),
       });
-      if (!res.ok) throw new Error("送信に失敗しました。");
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message || "送信に失敗しました。");
       router.push("/thanks/");
     } catch {
       setError("送信に失敗しました。しばらく経ってから再度お試しください。");
