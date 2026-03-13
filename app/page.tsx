@@ -9,10 +9,19 @@ export default function Home() {
       <Header initialDark />
       <main>
         {/* ── Hero ─────────────────────────────────────────────── */}
-        <section className="min-h-screen bg-zinc-950 flex flex-col justify-end relative overflow-hidden">
+        <section className="min-h-screen flex flex-col justify-end relative overflow-hidden">
+          {/* Background photo */}
+          <img
+            src={assetPath("/images/hero-bg.jpg")}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-zinc-950/30" />
+
           {/* Ghost typography decoration */}
           <div
-            className="absolute right-0 top-1/2 -translate-y-1/2 select-none pointer-events-none leading-none text-white/[0.025]"
+            className="absolute right-0 top-1/2 -translate-y-1/2 select-none pointer-events-none leading-none text-white/[0.04]"
             style={{
               fontSize: "22vw",
               fontFamily: "var(--font-cormorant), Georgia, serif",
@@ -22,7 +31,7 @@ export default function Home() {
             KA
           </div>
 
-          <div className="max-w-7xl mx-auto px-8 md:px-16 w-full pb-16 pt-32">
+          <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-16 w-full pb-16 pt-32">
             {/* Overline */}
             <p className="text-[9px] tracking-[0.5em] text-white/30 mb-16">
               KAWAZOE ARCHITECTS ── 一級建築士事務所 ── 東京 / 香川・高松
@@ -63,7 +72,7 @@ export default function Home() {
           </div>
 
           {/* Scroll indicator */}
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10">
             <div className="w-px h-10 bg-white/15" />
             <p className="text-[8px] tracking-[0.4em] text-white/15">SCROLL</p>
           </div>
@@ -89,6 +98,7 @@ export default function Home() {
                   title: "住宅設計",
                   text: "家族の暮らし方を丁寧に聞いて、長く愛せる家をつくります。新築・建替え・増改築。",
                   href: "/contact/?type=住宅",
+                  image: "/images/service-residential.jpg",
                 },
                 {
                   num: "02",
@@ -96,6 +106,7 @@ export default function Home() {
                   title: "店舗設計",
                   text: "ブランドの世界観を空間で表現します。カフェ・レストラン・クリニック・オフィスなど。",
                   href: "/contact/?type=店舗",
+                  image: "/images/service-commercial.jpg",
                 },
                 {
                   num: "03",
@@ -103,29 +114,40 @@ export default function Home() {
                   title: "リノベーション",
                   text: "古い建物の良さを活かしながら、現代の暮らしに合わせてつくり直します。",
                   href: "/contact/?type=リノベーション",
+                  image: "/images/service-renovation.jpg",
                 },
               ].map((s, i) => (
                 <Link
                   href={s.href}
                   key={i}
-                  className="relative group p-10 md:p-12 border-r border-zinc-100 last:border-r-0 hover:bg-zinc-950 transition-all duration-500 overflow-hidden"
+                  className="relative group border-r border-zinc-100 last:border-r-0 hover:bg-zinc-950 transition-all duration-500 overflow-hidden flex flex-col"
                 >
-                  {/* Background number */}
-                  <span
-                    className="absolute bottom-2 right-4 text-[110px] leading-none font-light text-zinc-100 group-hover:text-white/[0.04] transition-colors duration-500 select-none"
-                    style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-                  >
-                    {s.num}
-                  </span>
+                  {/* Photo */}
+                  <div className="aspect-[4/3] overflow-hidden relative">
+                    <img
+                      src={assetPath(s.image)}
+                      alt={s.title}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-zinc-950/20 group-hover:bg-zinc-950/40 transition-colors duration-500" />
+                  </div>
 
-                  <div className="relative z-10 min-h-[240px] flex flex-col">
-                    <p className="text-[8px] tracking-[0.5em] text-zinc-300 group-hover:text-white/25 mb-6 transition-colors duration-500">
+                  {/* Text */}
+                  <div className="relative z-10 p-10 md:p-12 flex-1 flex flex-col">
+                    {/* Background number */}
+                    <span
+                      className="absolute bottom-2 right-4 text-[110px] leading-none font-light text-zinc-100 group-hover:text-white/[0.04] transition-colors duration-500 select-none"
+                      style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
+                    >
+                      {s.num}
+                    </span>
+                    <p className="text-[8px] tracking-[0.5em] text-zinc-300 group-hover:text-white/25 mb-5 transition-colors duration-500">
                       {s.en}
                     </p>
-                    <h2 className="text-xl font-light tracking-wide mb-5 group-hover:text-white transition-colors duration-500">
+                    <h2 className="text-xl font-light tracking-wide mb-4 group-hover:text-white transition-colors duration-500">
                       {s.title}
                     </h2>
-                    <p className="text-xs text-zinc-500 font-light leading-7 mb-10 group-hover:text-white/45 transition-colors duration-500 flex-1">
+                    <p className="text-xs text-zinc-500 font-light leading-7 mb-8 group-hover:text-white/45 transition-colors duration-500 flex-1">
                       {s.text}
                     </p>
                     <span className="text-[9px] tracking-[0.3em] text-zinc-300 group-hover:text-white/50 transition-colors duration-500">
@@ -158,6 +180,25 @@ export default function Home() {
                   型にはめない。流行に左右されない。
                   あなたの暮らしを深く聞くことからすべてが始まります。
                 </p>
+
+                {/* Award stats */}
+                <div className="mt-14 flex gap-10 border-t border-zinc-200 pt-10">
+                  {[
+                    { num: "20+", label: "受賞歴" },
+                    { num: "45+", label: "年の実績" },
+                    { num: "3", label: "拠点" },
+                  ].map((stat) => (
+                    <div key={stat.label}>
+                      <p
+                        className="text-3xl font-light text-zinc-900 mb-1"
+                        style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
+                      >
+                        {stat.num}
+                      </p>
+                      <p className="text-[9px] tracking-[0.3em] text-zinc-400">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* Right: three points */}
@@ -220,7 +261,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
               {[
                 {
                   category: "住宅",
@@ -244,36 +285,49 @@ export default function Home() {
                   href: "https://www.kawazoe-architects.com/project/rental-villa/reluvilla/reluvilla.html",
                 },
               ].map((work, i) => (
-                <a href={work.href} key={i} target="_blank" rel="noopener noreferrer" className="group block">
-                  <div className="aspect-[4/3] bg-zinc-800 mb-4 overflow-hidden relative">
+                <a
+                  href={work.href}
+                  key={i}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block relative overflow-hidden"
+                >
+                  <div className="aspect-[3/4] bg-zinc-800 relative overflow-hidden">
                     <img
                       src={assetPath(work.image)}
                       alt={work.title}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-zinc-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-end p-6">
-                      <div>
-                        <p className="text-[9px] tracking-[0.3em] text-white/50 mb-2">
-                          {work.category}
-                        </p>
-                        <p className="text-sm text-white font-light">
-                          {work.title}
-                        </p>
-                        <p className="text-xs text-white/40 mt-1">
-                          {work.detail}
-                        </p>
-                      </div>
+                    {/* Always-visible bottom gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/20 to-transparent" />
+                    {/* Info overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <p className="text-[9px] tracking-[0.3em] text-white/40 mb-2">
+                        {work.category}
+                      </p>
+                      <p className="text-base font-light text-white tracking-wide">
+                        {work.title}
+                      </p>
+                      <p className="text-xs text-white/35 mt-1 font-light">
+                        {work.detail}
+                      </p>
+                    </div>
+                    {/* Hover arrow */}
+                    <div className="absolute top-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-[10px] tracking-[0.3em] text-white/60">VIEW →</span>
                     </div>
                   </div>
-                  <p className="text-[9px] tracking-[0.3em] text-white/25 mb-2 group-hover:text-white/40 transition-colors">
-                    {work.category}
-                  </p>
-                  <p className="text-sm font-light text-white/60 group-hover:text-white transition-colors duration-300">
-                    {work.title}
-                  </p>
                 </a>
               ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <Link
+                href="/works/"
+                className="inline-block text-[10px] tracking-[0.3em] border border-white/15 text-white/40 px-10 py-4 hover:border-white/40 hover:text-white/70 transition-all duration-300"
+              >
+                すべての実績を見る
+              </Link>
             </div>
           </div>
         </section>
