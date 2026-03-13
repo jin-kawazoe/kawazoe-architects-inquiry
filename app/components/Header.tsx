@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { assetPath } from "../lib/assetPath";
 
 interface HeaderProps {
   initialDark?: boolean;
@@ -29,13 +30,14 @@ export default function Header({ initialDark = false }: HeaderProps) {
         }`}
       >
         <div className="max-w-7xl mx-auto px-8 md:px-16 h-16 flex items-center justify-between">
-          <Link
-            href="/"
-            className={`text-[10px] tracking-[0.35em] font-light transition-colors duration-700 ${
-              isDark ? "text-white/80" : "text-zinc-900"
-            }`}
-          >
-            KAWAZOE ARCHITECTS
+          <Link href="/" className="flex items-center">
+            <img
+              src={assetPath("/images/logo.png")}
+              alt="KAWAZOE ARCHITECTS"
+              className={`h-8 w-auto transition-all duration-700 ${
+                isDark ? "brightness-0 invert" : "brightness-0"
+              }`}
+            />
           </Link>
 
           {/* Desktop nav */}
