@@ -13,7 +13,7 @@ export default function Footer() {
             <p className="text-xs text-white/30 font-light leading-7">
               河添建築事務所
               <br />
-              東京 / 香川・高松
+              東京（品川） / 香川（さぬき市）/ 高松
             </p>
           </div>
 

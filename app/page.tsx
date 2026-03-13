@@ -297,7 +297,7 @@ export default function Home() {
                   PRINCIPAL ARCHITECT
                 </p>
                 <h2 className="text-3xl font-light tracking-wide mb-2">
-                  河添 ——
+                  河添 甚
                 </h2>
                 <p className="text-[10px] text-zinc-400 mb-14 tracking-widest">
                   一級建築士

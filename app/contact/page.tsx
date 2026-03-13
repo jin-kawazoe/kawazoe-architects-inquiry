@@ -195,6 +195,37 @@ export default function ContactPage() {
           </div>
         </section>
 
+        {/* ── Direct Contact ───────────────────────────────────── */}
+        <section className="py-16 border-t border-zinc-100">
+          <div className="max-w-3xl mx-auto px-8 md:px-16">
+            <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-10">
+              DIRECT CONTACT
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-zinc-100">
+              {[
+                { label: "TOKYO", tel: "03-6421-6955" },
+                { label: "KAGAWA", tel: "0879-52-6158" },
+                { label: "TAKAMATSU", tel: "087-880-8653" },
+              ].map((office) => (
+                <div
+                  key={office.label}
+                  className="p-8 border-r border-zinc-100 last:border-r-0"
+                >
+                  <p className="text-[9px] tracking-[0.4em] text-zinc-300 mb-3">
+                    {office.label}
+                  </p>
+                  <a
+                    href={`tel:${office.tel}`}
+                    className="text-sm font-light text-zinc-700 hover:text-zinc-900 transition-colors tracking-wider"
+                  >
+                    {office.tel}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── Calendly ─────────────────────────────────────────── */}
         <section className="py-24 border-t border-zinc-100 bg-zinc-50">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
