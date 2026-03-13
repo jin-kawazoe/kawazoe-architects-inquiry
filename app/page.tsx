@@ -78,6 +78,60 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── こんな方へ ───────────────────────────────────────── */}
+        <section className="py-28 border-b border-zinc-100">
+          <div className="max-w-7xl mx-auto px-8 md:px-16">
+            <div className="flex flex-col md:flex-row md:items-baseline gap-6 md:gap-16 mb-16">
+              <p className="text-[9px] tracking-[0.5em] text-zinc-300 shrink-0">
+                FOR YOU
+              </p>
+              <h2 className="text-xl md:text-2xl font-light text-zinc-900 tracking-wide leading-relaxed">
+                こんなお悩み、ありませんか？
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+              {[
+                { n: "01", text: "土地はあるが、何から始めたらいいかわからない" },
+                { n: "02", text: "ハウスメーカーでは物足りない。自分だけの家をつくりたい" },
+                { n: "03", text: "古い家を活かしながら、今の暮らしに合わせてつくり直したい" },
+                { n: "04", text: "店舗を開くにあたって、空間でブランドを表現したい" },
+                { n: "05", text: "設計事務所は費用が高そう・敷居が高そうで不安" },
+                { n: "06", text: "まず話を聞いてほしいだけ。すぐ依頼しなくてもいいか心配" },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="border-t border-zinc-100 py-6 grid grid-cols-[40px_1fr] gap-4 items-start md:odd:border-r md:odd:pr-16 md:even:pl-16"
+                >
+                  <span
+                    className="text-[11px] text-zinc-300 font-light pt-0.5"
+                    style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
+                  >
+                    {item.n}
+                  </span>
+                  <p className="text-sm font-light text-zinc-700 leading-7">{item.text}</p>
+                </div>
+              ))}
+              <div className="border-t border-zinc-100 md:border-r md:pr-16" />
+              <div className="border-t border-zinc-100 md:pl-16" />
+            </div>
+
+            <div className="mt-14 flex items-center gap-8">
+              <p className="text-xs text-zinc-400 font-light leading-7">
+                ひとつでも当てはまるなら、まずお気軽にご相談ください。
+                <br />
+                初回相談は無料、まだ検討段階でも大丈夫です。
+              </p>
+              <a
+                href="/contact/"
+                className="shrink-0 text-[10px] tracking-[0.3em] bg-zinc-950 text-white px-8 py-3.5 hover:bg-zinc-700 transition-colors"
+              >
+                相談してみる
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* ── Services ─────────────────────────────────────────── */}
         <section className="py-32">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
@@ -242,6 +296,55 @@ export default function Home() {
                 ))}
                 <div className="border-t border-zinc-200" />
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 施主の声 ─────────────────────────────────────────── */}
+        <section className="py-32 border-t border-zinc-100">
+          <div className="max-w-7xl mx-auto px-8 md:px-16">
+            <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-20">
+              CLIENT VOICES
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-zinc-100">
+              {[
+                {
+                  quote: "「まだ土地も決まっていない段階で相談しに行ったのに、丁寧に聞いてもらえました。押しつけがましくなく、自分たちのペースで進められたのが良かったです。」",
+                  name: "T.M. 様",
+                  detail: "香川県・住宅設計",
+                  year: "2022",
+                },
+                {
+                  quote: "「設計事務所はハードルが高いイメージでしたが、初回の打ち合わせで払拭されました。完成した店舗を見たお客様から『雰囲気が好き』と言われるたびに、お願いして良かったと思います。」",
+                  name: "K.H. 様",
+                  detail: "東京都・店舗設計",
+                  year: "2021",
+                },
+                {
+                  quote: "「古い家を壊すか迷っていましたが、残せるものを活かした提案をもらえました。費用も想像より抑えられ、愛着のある家に住み続けられています。」",
+                  name: "Y.S. 様",
+                  detail: "香川県・リノベーション",
+                  year: "2023",
+                },
+              ].map((v, i) => (
+                <div
+                  key={i}
+                  className="p-10 md:p-12 border-r border-zinc-100 last:border-r-0 flex flex-col gap-8"
+                >
+                  <p className="text-sm font-light text-zinc-600 leading-[2.2] flex-1">
+                    {v.quote}
+                  </p>
+                  <div className="border-t border-zinc-100 pt-6">
+                    <p className="text-xs font-light text-zinc-800 tracking-wide mb-1">
+                      {v.name}
+                    </p>
+                    <p className="text-[9px] tracking-[0.3em] text-zinc-300">
+                      {v.detail} · {v.year}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
