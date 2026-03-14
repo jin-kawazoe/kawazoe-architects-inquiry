@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(netstat -ano)",
+      "Bash(cmd /c \"dir /b \"\"H:\\\\共有ドライブ\\\\HP_\\\\kawazoe-architects\\\\project\\\\house\\\\ay-house\"\"\")",
+      "Bash(powershell -Command \":*)",
+      "Bash(python3:*)",
+      "Bash(npm run:*)",
+      "Bash(dir \"C:\\\\Users\\\\jinka\\\\inquiry\\\\public\\\\images\\\\profile\")"
+    ]
+  }
+}
