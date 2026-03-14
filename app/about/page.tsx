@@ -48,6 +48,30 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* ── Banner Image ─────────────────────────────────────── */}
+        <div className="w-full h-[260px] md:h-[380px] overflow-hidden relative">
+          <img
+            src={assetPath("/images/profile/profile-hero.jpg")}
+            alt="KAWAZOE ARCHITECTS — 設計事務所"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-zinc-900/35" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
+            <p className="text-[10px] tracking-[0.5em] text-white/60 mb-5">
+              PRINCIPAL ARCHITECT
+            </p>
+            <p
+              className="font-light text-white leading-tight tracking-tight"
+              style={{ fontSize: "clamp(20px, 3.5vw, 44px)" }}
+            >
+              河添 甚 ／ JIN KAWAZOE
+            </p>
+            <p className="mt-4 text-xs text-white/55 font-light tracking-wider">
+              一級建築士 ／ 代表取締役
+            </p>
+          </div>
+        </div>
+
         {/* ── Profile ──────────────────────────────────────────── */}
         <section className="py-32">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
