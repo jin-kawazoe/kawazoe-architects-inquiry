@@ -37,9 +37,9 @@ export const metadata: Metadata = {
       "河添建築事務所への設計依頼・相談窓口。住宅・店舗・リノベーションの設計をご検討の方、まずはお気軽にご相談ください。初回相談無料。",
     images: [
       {
-        url: "/inquiry/images/hero-bg.jpg",
-        width: 1920,
-        height: 1080,
+        url: "/inquiry/images/ogp.jpg",
+        width: 1200,
+        height: 630,
         alt: "KAWAZOE ARCHITECTS — 設計依頼・相談",
       },
     ],
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "設計依頼・相談 | KAWAZOE ARCHITECTS",
     description:
       "河添建築事務所への設計依頼・相談窓口。住宅・店舗・リノベーションの設計をご検討の方、まずはお気軽にご相談ください。",
-    images: ["/inquiry/images/hero-bg.jpg"],
+    images: ["/inquiry/images/ogp.jpg"],
   },
   robots: {
     index: true,

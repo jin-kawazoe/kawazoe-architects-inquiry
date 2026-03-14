@@ -33,7 +33,7 @@ export default function Home() {
 
           <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-16 w-full pb-16 pt-32">
             {/* Overline */}
-            <p className="text-[9px] tracking-[0.5em] text-white/30 mb-16">
+            <p className="text-[10px] tracking-[0.5em] text-white/55 mb-16">
               KAWAZOE ARCHITECTS ── 一級建築士事務所 ── 東京 / 香川・高松
             </p>
 
@@ -51,7 +51,7 @@ export default function Home() {
 
             {/* Bottom bar */}
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 border-t border-white/10 pt-8">
-              <p className="text-xs text-white/30 font-light leading-7">
+              <p className="text-xs text-white/60 font-light leading-7">
                 住宅設計 / 店舗設計 / リノベーション
               </p>
               <div className="flex items-center gap-6">
@@ -82,7 +82,7 @@ export default function Home() {
         <section className="py-28 border-b border-zinc-100">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
             <div className="flex flex-col md:flex-row md:items-baseline gap-6 md:gap-16 mb-16">
-              <p className="text-[9px] tracking-[0.5em] text-zinc-300 shrink-0">
+              <p className="text-[10px] tracking-[0.5em] text-zinc-400 shrink-0">
                 FOR YOU
               </p>
               <h2 className="text-xl md:text-2xl font-light text-zinc-900 tracking-wide leading-relaxed">
@@ -136,10 +136,10 @@ export default function Home() {
         <section className="py-32">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
             <div className="flex items-baseline justify-between border-b border-zinc-100 pb-5 mb-0">
-              <p className="text-[9px] tracking-[0.5em] text-zinc-300">
+              <p className="text-[10px] tracking-[0.5em] text-zinc-400">
                 SERVICES
               </p>
-              <p className="text-[9px] tracking-[0.3em] text-zinc-200">
+              <p className="text-[10px] tracking-[0.3em] text-zinc-400">
                 住宅 / 店舗 / リノベーション
               </p>
             </div>
@@ -195,16 +195,16 @@ export default function Home() {
                     >
                       {s.num}
                     </span>
-                    <p className="text-[8px] tracking-[0.5em] text-zinc-300 group-hover:text-white/25 mb-5 transition-colors duration-500">
+                    <p className="text-[10px] tracking-[0.5em] text-zinc-400 group-hover:text-white/50 mb-5 transition-colors duration-500">
                       {s.en}
                     </p>
                     <h2 className="text-xl font-light tracking-wide mb-4 group-hover:text-white transition-colors duration-500">
                       {s.title}
                     </h2>
-                    <p className="text-xs text-zinc-500 font-light leading-7 mb-8 group-hover:text-white/45 transition-colors duration-500 flex-1">
+                    <p className="text-xs text-zinc-600 font-light leading-7 mb-8 group-hover:text-white/70 transition-colors duration-500 flex-1">
                       {s.text}
                     </p>
-                    <span className="text-[9px] tracking-[0.3em] text-zinc-300 group-hover:text-white/50 transition-colors duration-500">
+                    <span className="text-[10px] tracking-[0.3em] text-zinc-400 group-hover:text-white/70 transition-colors duration-500">
                       相談する →
                     </span>
                   </div>
@@ -220,7 +220,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-20 items-start">
               {/* Left: large quote */}
               <div className="md:sticky md:top-32">
-                <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-12">
+                <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-12">
                   WHY US
                 </p>
                 <blockquote className="text-[1.7rem] md:text-[2rem] font-light leading-[1.7] text-zinc-900 tracking-wide">
@@ -279,7 +279,7 @@ export default function Home() {
                     className="border-t border-zinc-200 py-10 grid grid-cols-[48px_1fr] gap-6"
                   >
                     <p
-                      className="text-[9px] tracking-[0.2em] text-zinc-300 pt-1"
+                      className="text-[10px] tracking-[0.2em] text-zinc-400 pt-1"
                       style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
                     >
                       {item.n}
@@ -288,7 +288,7 @@ export default function Home() {
                       <h3 className="text-sm font-light tracking-wide mb-3 text-zinc-900">
                         {item.title}
                       </h3>
-                      <p className="text-xs text-zinc-500 font-light leading-7">
+                      <p className="text-xs text-zinc-600 font-light leading-7">
                         {item.text}
                       </p>
                     </div>
@@ -303,7 +303,7 @@ export default function Home() {
         {/* ── 施主の声 ─────────────────────────────────────────── */}
         <section className="py-32 border-t border-zinc-100">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
-            <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-20">
+            <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-20">
               CLIENT VOICES
             </p>
 
@@ -339,7 +339,7 @@ export default function Home() {
                     <p className="text-xs font-light text-zinc-800 tracking-wide mb-1">
                       {v.name}
                     </p>
-                    <p className="text-[9px] tracking-[0.3em] text-zinc-300">
+                    <p className="text-[10px] tracking-[0.3em] text-zinc-400">
                       {v.detail} · {v.year}
                     </p>
                   </div>
@@ -353,12 +353,12 @@ export default function Home() {
         <section className="py-32 bg-zinc-950">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
             <div className="flex items-baseline justify-between border-b border-white/8 pb-5 mb-14">
-              <p className="text-[9px] tracking-[0.5em] text-white/25">
+              <p className="text-[10px] tracking-[0.5em] text-white/50">
                 WORKS
               </p>
               <Link
                 href="/works/"
-                className="text-[9px] tracking-[0.3em] text-white/25 hover:text-white/60 transition-colors cta-underline"
+                className="text-[10px] tracking-[0.3em] text-white/50 hover:text-white/75 transition-colors cta-underline"
               >
                 すべて見る →
               </Link>
@@ -369,7 +369,7 @@ export default function Home() {
                 {
                   category: "住宅",
                   title: "AK MODEL HOUSE",
-                  detail: "香川・さぬき市 / 平屋コートハウス",
+                  detail: "福岡・行橋市 / 平屋コートハウス",
                   image: "/images/works/ak-model-house.jpg",
                   href: "/works/ak-model-house/",
                 },
@@ -403,13 +403,13 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/20 to-transparent" />
                     {/* Info overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <p className="text-[9px] tracking-[0.3em] text-white/40 mb-2">
+                      <p className="text-[10px] tracking-[0.3em] text-white/60 mb-2">
                         {work.category}
                       </p>
                       <p className="text-base font-light text-white tracking-wide">
                         {work.title}
                       </p>
-                      <p className="text-xs text-white/35 mt-1 font-light">
+                      <p className="text-xs text-white/60 mt-1 font-light">
                         {work.detail}
                       </p>
                     </div>
@@ -425,7 +425,7 @@ export default function Home() {
             <div className="mt-12 text-center">
               <Link
                 href="/works/"
-                className="inline-block text-[10px] tracking-[0.3em] border border-white/15 text-white/40 px-10 py-4 hover:border-white/40 hover:text-white/70 transition-all duration-300"
+                className="inline-block text-[10px] tracking-[0.3em] border border-white/25 text-white/60 px-10 py-4 hover:border-white/55 hover:text-white/85 transition-all duration-300"
               >
                 すべての実績を見る
               </Link>
@@ -438,7 +438,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-8 md:px-16">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1.8fr] gap-16 items-start">
               <div>
-                <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-8">
+                <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-8">
                   ABOUT
                 </p>
                 <div className="aspect-[3/4] bg-zinc-100 overflow-hidden relative">
@@ -486,7 +486,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-8 md:px-16">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-16 items-end">
               <div>
-                <p className="text-[9px] tracking-[0.5em] text-white/20 mb-10">
+                <p className="text-[10px] tracking-[0.5em] text-white/50 mb-10">
                   CONTACT
                 </p>
                 <h2
@@ -497,7 +497,7 @@ export default function Home() {
                   <br />
                   話してみませんか。
                 </h2>
-                <p className="mt-6 text-xs text-white/35 font-light leading-7">
+                <p className="mt-6 text-xs text-white/65 font-light leading-7">
                   相談だけでも大丈夫です。初回のお話は無料でお受けしています。
                 </p>
               </div>
@@ -511,7 +511,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/flow/"
-                  className="text-[10px] tracking-[0.3em] border border-white/20 text-white/45 px-10 py-4 hover:border-white/50 hover:text-white/70 transition-all text-center"
+                  className="text-[10px] tracking-[0.3em] border border-white/30 text-white/65 px-10 py-4 hover:border-white/60 hover:text-white/90 transition-all text-center"
                 >
                   依頼の流れを見る
                 </Link>

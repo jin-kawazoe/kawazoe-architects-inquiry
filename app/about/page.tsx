@@ -26,7 +26,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-8 md:px-16">
             <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-12 items-end">
               <div>
-                <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-6">
+                <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-6">
                   ABOUT
                 </p>
                 <h1
@@ -39,7 +39,7 @@ export default function AboutPage() {
                 </h1>
               </div>
               <div className="md:pb-3 md:max-w-sm md:ml-auto">
-                <p className="text-xs text-zinc-500 font-light leading-8">
+                <p className="text-xs text-zinc-600 font-light leading-8">
                   設計を依頼するにあたって、どんな人が設計するのかは重要なことだと思っています。
                   事務所と代表について、少し紹介させてください。
                 </p>
@@ -63,7 +63,7 @@ export default function AboutPage() {
               </div>
 
               <div className="md:pt-8">
-                <p className="text-[9px] tracking-[0.4em] text-zinc-300 mb-5">
+                <p className="text-[10px] tracking-[0.4em] text-zinc-400 mb-5">
                   PRINCIPAL ARCHITECT
                 </p>
                 <h2 className="text-3xl font-light tracking-wide mb-1">
@@ -106,10 +106,10 @@ export default function AboutPage() {
                       key={i}
                       className="border-t border-zinc-100 py-4 grid grid-cols-[60px_1fr] gap-6"
                     >
-                      <p className="text-[10px] tracking-widest text-zinc-300">
+                      <p className="text-[10px] tracking-widest text-zinc-400">
                         {item.year}
                       </p>
-                      <p className="text-xs text-zinc-500 font-light">
+                      <p className="text-xs text-zinc-600 font-light">
                         {item.text}
                       </p>
                     </div>
@@ -139,7 +139,7 @@ export default function AboutPage() {
         {/* ── Awards ───────────────────────────────────────────── */}
         <section className="py-24 border-t border-zinc-100">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
-            <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-16">
+            <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-16">
               AWARDS
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-0">
@@ -157,10 +157,10 @@ export default function AboutPage() {
                   key={i}
                   className="border-t border-zinc-100 py-5 grid grid-cols-[56px_1fr] gap-6"
                 >
-                  <p className="text-[10px] tracking-widest text-zinc-300">
+                  <p className="text-[10px] tracking-widest text-zinc-400">
                     {item.year}
                   </p>
-                  <p className="text-xs text-zinc-500 font-light leading-6">
+                  <p className="text-xs text-zinc-600 font-light leading-6">
                     {item.text}
                   </p>
                 </div>
@@ -174,7 +174,7 @@ export default function AboutPage() {
         {/* ── Philosophy ───────────────────────────────────────── */}
         <section className="py-32 bg-zinc-950">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
-            <p className="text-[9px] tracking-[0.5em] text-white/25 mb-20">
+            <p className="text-[10px] tracking-[0.5em] text-white/55 mb-20">
               PHILOSOPHY
             </p>
 
@@ -191,15 +191,15 @@ export default function AboutPage() {
                   建築」を。
                 </h2>
                 <div className="space-y-6">
-                  <p className="text-sm text-white/45 font-light leading-[2]">
+                  <p className="text-sm text-white/70 font-light leading-[2]">
                     デザイン賞を受賞するような建築も、依頼者の暮らしに合っていなければ意味がない。
                     そう思っています。
                   </p>
-                  <p className="text-sm text-white/45 font-light leading-[2]">
+                  <p className="text-sm text-white/70 font-light leading-[2]">
                     初回の打ち合わせでは、間取りや外観の話よりも先に、
                     「どんな暮らしをしたいか」「今の生活で不便なことは何か」を聞くことにしています。
                   </p>
-                  <p className="text-sm text-white/45 font-light leading-[2]">
+                  <p className="text-sm text-white/70 font-light leading-[2]">
                     そこから積み上げた設計は、完成してから「こうすればよかった」が少ない。
                   </p>
                 </div>
@@ -224,10 +224,10 @@ export default function AboutPage() {
                     key={i}
                     className="border-t border-white/8 py-8 grid grid-cols-[1fr_1.6fr] gap-8"
                   >
-                    <p className="text-[10px] tracking-widest text-white/35">
+                    <p className="text-[10px] tracking-widest text-white/65">
                       {item.label}
                     </p>
-                    <p className="text-xs text-white/40 font-light leading-7">
+                    <p className="text-xs text-white/65 font-light leading-7">
                       {item.text}
                     </p>
                   </div>
@@ -241,7 +241,7 @@ export default function AboutPage() {
         {/* ── Office ───────────────────────────────────────────── */}
         <section className="py-32 border-b border-zinc-100">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
-            <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-16">
+            <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-16">
               OFFICE
             </p>
 
@@ -258,10 +258,10 @@ export default function AboutPage() {
                   key={i}
                   className="border-t border-zinc-100 py-4 grid grid-cols-[56px_1fr] gap-6"
                 >
-                  <p className="text-[10px] tracking-widest text-zinc-300">
+                  <p className="text-[10px] tracking-widest text-zinc-400">
                     {item.year}
                   </p>
-                  <p className="text-xs text-zinc-500 font-light">
+                  <p className="text-xs text-zinc-600 font-light">
                     {item.text}
                   </p>
                 </div>
@@ -294,13 +294,13 @@ export default function AboutPage() {
                   key={i}
                   className="p-10 md:p-12 border-r border-zinc-100 last:border-r-0 hover:bg-zinc-50 transition-colors duration-300"
                 >
-                  <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-6">
+                  <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-6">
                     {office.en}
                   </p>
                   <h3 className="text-base font-light tracking-wide mb-5">
                     {office.title}
                   </h3>
-                  <p className="text-xs text-zinc-500 font-light leading-8 whitespace-pre-line mb-4">
+                  <p className="text-xs text-zinc-600 font-light leading-8 whitespace-pre-line mb-4">
                     {office.addr}
                   </p>
                   <a
@@ -315,7 +315,7 @@ export default function AboutPage() {
 
             {/* Affiliation */}
             <div className="mt-16 flex flex-wrap gap-x-10 gap-y-3">
-              <p className="text-[9px] tracking-[0.4em] text-zinc-300 w-full mb-2">AFFILIATION</p>
+              <p className="text-[10px] tracking-[0.4em] text-zinc-400 w-full mb-2">AFFILIATION</p>
               {[
                 "一般社団法人 香川県建築士会",
                 "一般社団法人 東京都建築士会",

@@ -50,7 +50,7 @@ export default async function WorkSlugPage({ params }: Props) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 px-8 md:px-16 pb-14">
-            <p className="text-[9px] tracking-[0.5em] text-white/35 mb-4">
+            <p className="text-[10px] tracking-[0.5em] text-white/65 mb-4">
               {work.category}
             </p>
             <h1
@@ -59,7 +59,7 @@ export default async function WorkSlugPage({ params }: Props) {
             >
               {work.title}
             </h1>
-            <p className="text-xs text-white/45 font-light mt-3 tracking-wider">
+            <p className="text-xs text-white/70 font-light mt-3 tracking-wider">
               {work.detail}
             </p>
           </div>
@@ -70,7 +70,7 @@ export default async function WorkSlugPage({ params }: Props) {
           <div className="max-w-7xl mx-auto px-8 md:px-16">
             <div className="grid grid-cols-1 md:grid-cols-[1.8fr_1fr] gap-20 items-start">
               <div>
-                <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-8">
+                <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-8">
                   OVERVIEW
                 </p>
                 <p className="text-sm text-zinc-600 font-light leading-[2.2] max-w-xl">
@@ -78,7 +78,7 @@ export default async function WorkSlugPage({ params }: Props) {
                 </p>
               </div>
               <div>
-                <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-8">
+                <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-8">
                   SPECS
                 </p>
                 <div className="space-y-0">
@@ -87,10 +87,10 @@ export default async function WorkSlugPage({ params }: Props) {
                       key={i}
                       className="border-t border-zinc-100 py-4 grid grid-cols-[80px_1fr] gap-6"
                     >
-                      <p className="text-[9px] tracking-[0.3em] text-zinc-300">
+                      <p className="text-[10px] tracking-[0.3em] text-zinc-400">
                         {spec.label}
                       </p>
-                      <p className="text-xs text-zinc-600 font-light">
+                      <p className="text-xs text-zinc-700 font-light">
                         {spec.value}
                       </p>
                     </div>
@@ -123,10 +123,10 @@ export default async function WorkSlugPage({ params }: Props) {
                   href={`/works/${prev.id}/`}
                   className="group py-10 pr-8 border-r border-zinc-100 hover:bg-zinc-50 transition-colors duration-300"
                 >
-                  <p className="text-[9px] tracking-[0.4em] text-zinc-300 mb-3">
+                  <p className="text-[10px] tracking-[0.4em] text-zinc-400 mb-3">
                     ← PREV
                   </p>
-                  <p className="text-xs font-light text-zinc-500 group-hover:text-zinc-900 transition-colors">
+                  <p className="text-xs font-light text-zinc-600 group-hover:text-zinc-900 transition-colors">
                     {prev.title}
                   </p>
                 </Link>
@@ -138,10 +138,10 @@ export default async function WorkSlugPage({ params }: Props) {
                   href={`/works/${next.id}/`}
                   className="group py-10 pl-8 text-right hover:bg-zinc-50 transition-colors duration-300"
                 >
-                  <p className="text-[9px] tracking-[0.4em] text-zinc-300 mb-3">
+                  <p className="text-[10px] tracking-[0.4em] text-zinc-400 mb-3">
                     NEXT →
                   </p>
-                  <p className="text-xs font-light text-zinc-500 group-hover:text-zinc-900 transition-colors">
+                  <p className="text-xs font-light text-zinc-600 group-hover:text-zinc-900 transition-colors">
                     {next.title}
                   </p>
                 </Link>
@@ -155,7 +155,7 @@ export default async function WorkSlugPage({ params }: Props) {
         {/* ── CTA ─────────────────────────────────────────────── */}
         <section className="py-32 bg-zinc-950">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
-            <p className="text-[9px] tracking-[0.5em] text-white/20 mb-10">
+            <p className="text-[10px] tracking-[0.5em] text-white/50 mb-10">
               CONTACT
             </p>
             <h2
@@ -166,7 +166,7 @@ export default async function WorkSlugPage({ params }: Props) {
               <br />
               設計事務所に相談する
             </h2>
-            <p className="text-sm text-white/40 font-light leading-8 max-w-md mb-12">
+            <p className="text-sm text-white/70 font-light leading-8 max-w-md mb-12">
               初回相談は無料です。まだ検討段階でも構いません。
               お気軽にご連絡ください。
             </p>
@@ -179,7 +179,7 @@ export default async function WorkSlugPage({ params }: Props) {
               </Link>
               <Link
                 href="/works/"
-                className="inline-block text-[10px] tracking-[0.3em] border border-white/20 text-white/50 px-12 py-4 hover:border-white/60 hover:text-white/80 transition-all text-center"
+                className="inline-block text-[10px] tracking-[0.3em] border border-white/30 text-white/70 px-12 py-4 hover:border-white/65 hover:text-white/95 transition-all text-center"
               >
                 実績一覧へ戻る
               </Link>

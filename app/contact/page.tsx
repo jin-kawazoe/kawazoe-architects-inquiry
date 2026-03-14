@@ -22,7 +22,7 @@ function CalendlyEmbed() {
   if (!CALENDLY_URL) {
     return (
       <div className="border border-zinc-200 p-12 bg-white flex flex-col items-center justify-center gap-6 min-h-[300px]">
-        <p className="text-[9px] tracking-[0.4em] text-zinc-300 text-center">
+        <p className="text-[10px] tracking-[0.4em] text-zinc-400 text-center">
           ONLINE BOOKING
         </p>
         <p className="text-sm font-light text-zinc-500 text-center leading-8">
@@ -116,7 +116,7 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto px-8 md:px-16">
             <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-12 items-end">
               <div>
-                <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-6">
+                <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-6">
                   CONTACT
                 </p>
                 <h1
@@ -129,7 +129,7 @@ export default function ContactPage() {
                 </h1>
               </div>
               <div className="md:pb-3 md:max-w-sm md:ml-auto">
-                <p className="text-xs text-zinc-500 font-light leading-8">
+                <p className="text-xs text-zinc-600 font-light leading-8">
                   まだ検討段階でも構いません。「話を聞いてみたい」という気持ちで、
                   お気軽にご連絡ください。初回相談は無料です。
                 </p>
@@ -144,7 +144,7 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit} className="space-y-14">
               {/* 用途選択 */}
               <div>
-                <label className="block text-[9px] tracking-[0.4em] text-zinc-300 mb-6">
+                <label className="block text-[10px] tracking-[0.4em] text-zinc-400 mb-6">
                   ご相談の内容{" "}
                   <span className="text-zinc-500">*</span>
                 </label>
@@ -168,7 +168,7 @@ export default function ContactPage() {
 
               {/* お名前 */}
               <div>
-                <label className="block text-[9px] tracking-[0.4em] text-zinc-300 mb-5">
+                <label className="block text-[10px] tracking-[0.4em] text-zinc-400 mb-5">
                   お名前{" "}
                   <span className="text-zinc-500">*</span>
                 </label>
@@ -185,7 +185,7 @@ export default function ContactPage() {
 
               {/* メールアドレス */}
               <div>
-                <label className="block text-[9px] tracking-[0.4em] text-zinc-300 mb-5">
+                <label className="block text-[10px] tracking-[0.4em] text-zinc-400 mb-5">
                   メールアドレス{" "}
                   <span className="text-zinc-500">*</span>
                 </label>
@@ -202,9 +202,9 @@ export default function ContactPage() {
 
               {/* 電話番号 */}
               <div>
-                <label className="block text-[9px] tracking-[0.4em] text-zinc-300 mb-5">
+                <label className="block text-[10px] tracking-[0.4em] text-zinc-400 mb-5">
                   お電話番号{" "}
-                  <span className="text-[9px] text-zinc-300 tracking-normal">
+                  <span className="text-[10px] text-zinc-400 tracking-normal">
                     (任意)
                   </span>
                 </label>
@@ -221,9 +221,9 @@ export default function ContactPage() {
 
               {/* 相談内容 */}
               <div>
-                <label className="block text-[9px] tracking-[0.4em] text-zinc-300 mb-5">
+                <label className="block text-[10px] tracking-[0.4em] text-zinc-400 mb-5">
                   ご相談内容{" "}
-                  <span className="text-[9px] text-zinc-300 tracking-normal">
+                  <span className="text-[10px] text-zinc-400 tracking-normal">
                     (任意)
                   </span>
                 </label>
@@ -252,7 +252,7 @@ export default function ContactPage() {
                 >
                   {loading ? "送信中..." : "送信する"}
                 </button>
-                <p className="text-[9px] text-zinc-300 font-light leading-5">
+                <p className="text-[10px] text-zinc-400 font-light leading-5">
                   送信後、2営業日以内にご連絡します。
                 </p>
               </div>
@@ -263,7 +263,7 @@ export default function ContactPage() {
         {/* ── Direct Contact ───────────────────────────────────── */}
         <section className="py-16 border-t border-zinc-100">
           <div className="max-w-3xl mx-auto px-8 md:px-16">
-            <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-10">
+            <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-10">
               DIRECT CONTACT
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-zinc-100">
@@ -276,7 +276,7 @@ export default function ContactPage() {
                   key={office.label}
                   className="p-8 border-r border-zinc-100 last:border-r-0"
                 >
-                  <p className="text-[9px] tracking-[0.4em] text-zinc-300 mb-3">
+                  <p className="text-[10px] tracking-[0.4em] text-zinc-400 mb-3">
                     {office.label}
                   </p>
                   <a
@@ -296,7 +296,7 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto px-8 md:px-16">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1.8fr] gap-16 items-start">
               <div>
-                <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-6">
+                <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-6">
                   BOOK A CALL
                 </p>
                 <h2 className="text-2xl font-light tracking-wide mb-5">
@@ -304,7 +304,7 @@ export default function ContactPage() {
                   <br />
                   予約する
                 </h2>
-                <p className="text-xs text-zinc-500 font-light leading-8">
+                <p className="text-xs text-zinc-600 font-light leading-8">
                   メールのやりとりより、まず話したい方は
                   こちらから直接ご予約いただけます。
                   <br />

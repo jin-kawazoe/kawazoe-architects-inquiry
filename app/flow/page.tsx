@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CTASection from "../components/CTASection";
 import Link from "next/link";
+import { assetPath } from "../lib/assetPath";
 
 export const metadata: Metadata = {
   title: "依頼の流れ・費用の考え方 | FLOW & FEE",
@@ -149,7 +150,7 @@ export default function FlowPage() {
           <div className="max-w-7xl mx-auto px-8 md:px-16">
             <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-12 items-end">
               <div>
-                <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-6">
+                <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-6">
                   FLOW & FEE
                 </p>
                 <h1
@@ -162,7 +163,7 @@ export default function FlowPage() {
                 </h1>
               </div>
               <div className="md:pb-3 md:max-w-sm md:ml-auto">
-                <p className="text-xs text-zinc-500 font-light leading-8">
+                <p className="text-xs text-zinc-600 font-light leading-8">
                   設計事務所への依頼が初めての方でも安心していただけるよう、
                   流れと費用の考え方を正直にお伝えします。
                   わからないことはいつでもお問い合わせください。
@@ -172,10 +173,34 @@ export default function FlowPage() {
           </div>
         </section>
 
+        {/* ── Banner Image ─────────────────────────────────────── */}
+        <div className="w-full h-[280px] md:h-[420px] overflow-hidden relative">
+          <img
+            src={assetPath("/images/flow-banner.jpg")}
+            alt="AY HOUSE リビング・ダイニング"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-zinc-900/40" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
+            <p className="text-[10px] tracking-[0.5em] text-white/60 mb-5">
+              PROCESS
+            </p>
+            <p
+              className="font-light text-white leading-tight tracking-tight"
+              style={{ fontSize: "clamp(22px, 4vw, 48px)" }}
+            >
+              設計は、対話からはじまる。
+            </p>
+            <p className="mt-5 text-xs text-white/60 font-light tracking-wide">
+              Architecture begins with conversation.
+            </p>
+          </div>
+        </div>
+
         {/* ── Steps ────────────────────────────────────────────── */}
         <section className="py-32">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
-            <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-20">
+            <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-20">
               STEP BY STEP
             </p>
 
@@ -198,11 +223,11 @@ export default function FlowPage() {
                       <h2 className="text-base font-light tracking-wide">
                         {s.title}
                       </h2>
-                      <span className="text-[9px] tracking-[0.2em] text-zinc-300 sm:ml-6">
+                      <span className="text-[10px] tracking-[0.2em] text-zinc-400 sm:ml-6">
                         {s.duration}
                       </span>
                     </div>
-                    <p className="text-xs text-zinc-500 font-light leading-8 max-w-2xl">
+                    <p className="text-xs text-zinc-600 font-light leading-8 max-w-2xl">
                       {s.description}
                     </p>
                     {s.note && (
@@ -217,7 +242,7 @@ export default function FlowPage() {
 
             {/* Timeline summary */}
             <div className="mt-20 pt-14 border-t border-zinc-100">
-              <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-8">
+              <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-8">
                 TOTAL TIMELINE
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-zinc-100">
@@ -231,7 +256,7 @@ export default function FlowPage() {
                     key={i}
                     className="p-8 border-r border-zinc-100 last:border-r-0 border-b md:border-b-0"
                   >
-                    <p className="text-[9px] tracking-[0.3em] text-zinc-300 mb-3">
+                    <p className="text-[10px] tracking-[0.3em] text-zinc-400 mb-3">
                       {item.label}
                     </p>
                     <p className="text-sm font-light text-zinc-700">
@@ -240,7 +265,7 @@ export default function FlowPage() {
                   </div>
                 ))}
               </div>
-              <p className="mt-4 text-[9px] text-zinc-300 font-light">
+              <p className="mt-4 text-[10px] text-zinc-400 font-light">
                 ※ 上記はあくまで目安です。敷地条件・プロジェクト規模によって異なります。
               </p>
             </div>
@@ -250,7 +275,7 @@ export default function FlowPage() {
         {/* ── Fee ──────────────────────────────────────────────── */}
         <section className="py-32 bg-zinc-950">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
-            <p className="text-[9px] tracking-[0.5em] text-white/25 mb-20">
+            <p className="text-[10px] tracking-[0.5em] text-white/55 mb-20">
               FEE
             </p>
 
@@ -260,18 +285,18 @@ export default function FlowPage() {
                   費用の考え方
                 </h2>
                 <div className="space-y-6">
-                  <p className="text-sm text-white/45 font-light leading-[2]">
+                  <p className="text-sm text-white/70 font-light leading-[2]">
                     設計費用は「設計料」と「工事監理料」から構成されます。
                     金額は建物の規模・用途・プロジェクトの複雑さによって異なるため、
                     一概に「いくら」とお伝えするのが難しい部分があります。
                   </p>
-                  <p className="text-sm text-white/45 font-light leading-[2]">
+                  <p className="text-sm text-white/70 font-light leading-[2]">
                     一般的な目安として、工事費の10〜15%程度とされることが多いです。
                     たとえば工事費が3,000万円の住宅であれば、
                     設計料は300〜450万円程度のイメージです。
                     小規模な案件ではこの割合が高くなることもあります。
                   </p>
-                  <p className="text-sm text-white/45 font-light leading-[2]">
+                  <p className="text-sm text-white/70 font-light leading-[2]">
                     費用の詳細については、初回相談でご予算と規模感をお聞きした上で
                     具体的にご説明します。「高いかも」と思って諦める前に、
                     まず一度お話しください。
@@ -279,10 +304,10 @@ export default function FlowPage() {
                 </div>
 
                 <div className="mt-10 border border-white/10 p-6">
-                  <p className="text-[9px] tracking-[0.4em] text-white/25 mb-5">
+                  <p className="text-[10px] tracking-[0.4em] text-white/55 mb-5">
                     NOTE
                   </p>
-                  <p className="text-xs text-white/35 font-light leading-7">
+                  <p className="text-xs text-white/60 font-light leading-7">
                     設計料は工事費と別にかかる費用です。ただし設計事務所を通すことで、
                     施工業者の相見積りが取れるため、工事費が抑えられるケースも多くあります。
                     「設計料分だけ高くなる」とは限りません。
@@ -302,7 +327,7 @@ export default function FlowPage() {
                     key={i}
                     className="flex justify-between items-center py-6 border-b border-white/8"
                   >
-                    <p className="text-[9px] tracking-[0.4em] text-white/30">
+                    <p className="text-[10px] tracking-[0.4em] text-white/60">
                       {item.label}
                     </p>
                     <p className="text-sm font-light text-white/60">
@@ -310,14 +335,14 @@ export default function FlowPage() {
                     </p>
                   </div>
                 ))}
-                <p className="text-[9px] text-white/20 font-light leading-6 pt-5">
+                <p className="text-[10px] text-white/45 font-light leading-6 pt-5">
                   ※ 上記はあくまで目安です。詳細はご相談ください。
                 </p>
 
                 <div className="mt-10">
                   <Link
                     href="/contact/"
-                    className="inline-block text-[10px] tracking-[0.3em] border border-white/20 text-white/50 px-8 py-4 hover:border-white/50 hover:text-white/80 transition-all duration-300"
+                    className="inline-block text-[10px] tracking-[0.3em] border border-white/30 text-white/70 px-8 py-4 hover:border-white/60 hover:text-white/95 transition-all duration-300"
                   >
                     費用について相談する
                   </Link>
@@ -330,7 +355,7 @@ export default function FlowPage() {
         {/* ── FAQ ──────────────────────────────────────────────── */}
         <section className="py-32 border-b border-zinc-100">
           <div className="max-w-7xl mx-auto px-8 md:px-16">
-            <p className="text-[9px] tracking-[0.5em] text-zinc-300 mb-4">
+            <p className="text-[10px] tracking-[0.5em] text-zinc-400 mb-4">
               FAQ
             </p>
             <h2 className="text-2xl font-light tracking-wide text-zinc-900 mb-20">
@@ -339,7 +364,7 @@ export default function FlowPage() {
 
             {faqCategories.map((category) => (
               <div key={category} className="mb-16 last:mb-0">
-                <p className="text-[9px] tracking-[0.4em] text-zinc-300 mb-0 pb-5 border-b border-zinc-100">
+                <p className="text-[10px] tracking-[0.4em] text-zinc-400 mb-0 pb-5 border-b border-zinc-100">
                   {category.toUpperCase()}
                 </p>
                 <div className="space-y-0">
@@ -353,7 +378,7 @@ export default function FlowPage() {
                         <p className="text-sm font-light leading-7 text-zinc-800">
                           {faq.q}
                         </p>
-                        <p className="text-xs text-zinc-500 font-light leading-8">
+                        <p className="text-xs text-zinc-600 font-light leading-8">
                           {faq.a}
                         </p>
                       </div>
@@ -363,7 +388,7 @@ export default function FlowPage() {
             ))}
 
             <div className="mt-12 pt-8 border-t border-zinc-100">
-              <p className="text-xs text-zinc-500 font-light">
+              <p className="text-xs text-zinc-600 font-light">
                 他にご不明な点は
                 <Link
                   href="/contact/"

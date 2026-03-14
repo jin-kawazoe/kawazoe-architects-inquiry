@@ -6,7 +6,7 @@ export default function CTASection() {
       <div className="max-w-7xl mx-auto px-8 md:px-16">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 items-end">
           <div>
-            <p className="text-[9px] tracking-[0.4em] text-white/25 mb-8">
+            <p className="text-[10px] tracking-[0.4em] text-white/50 mb-8">
               CONTACT
             </p>
             <h2 className="text-4xl md:text-5xl font-light text-white leading-[1.3] tracking-wide">
@@ -24,11 +24,11 @@ export default function CTASection() {
             </Link>
             <Link
               href="/flow/"
-              className="text-[10px] tracking-[0.3em] border border-white/20 text-white/50 px-10 py-4 hover:border-white/60 hover:text-white/80 transition-all text-center"
+              className="text-[10px] tracking-[0.3em] border border-white/30 text-white/65 px-10 py-4 hover:border-white/60 hover:text-white/90 transition-all text-center"
             >
               依頼の流れを見る
             </Link>
-            <p className="text-[9px] text-white/20 text-center leading-5">
+            <p className="text-[10px] text-white/45 text-center leading-5">
               初回相談は無料です
             </p>
           </div>

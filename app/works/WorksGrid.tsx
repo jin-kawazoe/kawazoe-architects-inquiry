@@ -19,10 +19,10 @@ export default function WorksGrid() {
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className={`text-[9px] tracking-[0.4em] py-5 whitespace-nowrap border-b-2 transition-all duration-200 ${
+                className={`text-[10px] tracking-[0.4em] py-5 whitespace-nowrap border-b-2 transition-all duration-200 ${
                   active === cat
                     ? "border-zinc-900 text-zinc-900"
-                    : "border-transparent text-zinc-400 hover:text-zinc-700 hover:border-zinc-300"
+                    : "border-transparent text-zinc-500 hover:text-zinc-700 hover:border-zinc-300"
                 }`}
               >
                 {cat}
@@ -56,7 +56,7 @@ export default function WorksGrid() {
                 </div>
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-[8px] tracking-[0.4em] text-zinc-300 mb-2">
+                    <p className="text-[10px] tracking-[0.4em] text-zinc-400 mb-2">
                       {work.category}
                     </p>
                     <h2 className="text-sm font-light mb-1 group-hover:text-zinc-500 transition-colors tracking-wider">
