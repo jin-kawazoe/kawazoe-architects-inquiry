@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
+export const metadata: Metadata = {
+  title: "送信完了 | CONTACT",
+  description: "お問い合わせありがとうございます。",
+  robots: { index: false, follow: false },
+};
 
 export default function ThanksPage() {
   return (
@@ -47,7 +54,9 @@ export default function ThanksPage() {
                   <li key={i} className="flex gap-4 items-start">
                     <span
                       className="text-[10px] text-white/20 shrink-0 pt-0.5"
-                      style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
+                      style={{
+                        fontFamily: "var(--font-cormorant), Georgia, serif",
+                      }}
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -59,7 +68,8 @@ export default function ThanksPage() {
               </ol>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* CTA buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-20">
               <Link
                 href="/"
                 className="text-[10px] tracking-[0.3em] bg-white text-zinc-950 px-10 py-4 hover:bg-zinc-200 transition-colors text-center"
@@ -72,6 +82,51 @@ export default function ThanksPage() {
               >
                 依頼の流れを見る
               </Link>
+            </div>
+
+            {/* While you wait */}
+            <div className="border-t border-white/8 pt-14">
+              <p className="text-[9px] tracking-[0.5em] text-white/20 mb-10">
+                WHILE YOU WAIT
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 border border-white/8 max-w-2xl">
+                {[
+                  {
+                    label: "WORKS",
+                    desc: "実績を見る",
+                    href: "/works/",
+                  },
+                  {
+                    label: "ABOUT",
+                    desc: "建築家について",
+                    href: "/about/",
+                  },
+                  {
+                    label: "PORTFOLIO",
+                    desc: "メインサイト",
+                    href: "https://www.kawazoe-architects.com/",
+                    external: true,
+                  },
+                ].map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target={item.external ? "_blank" : undefined}
+                    rel={item.external ? "noopener noreferrer" : undefined}
+                    className="group p-8 border-r border-white/8 last:border-r-0 hover:bg-white/4 transition-colors duration-300"
+                  >
+                    <p className="text-[9px] tracking-[0.4em] text-white/25 mb-2">
+                      {item.label}
+                    </p>
+                    <p className="text-xs text-white/35 font-light group-hover:text-white/60 transition-colors">
+                      {item.desc}
+                      {item.external && (
+                        <span className="ml-1 text-white/20">↗</span>
+                      )}
+                    </p>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </section>

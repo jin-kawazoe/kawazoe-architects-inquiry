@@ -1,9 +1,63 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
+const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL;
+
+function CalendlyEmbed() {
+  useEffect(() => {
+    if (!CALENDLY_URL) return;
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
+  if (!CALENDLY_URL) {
+    return (
+      <div className="border border-zinc-200 p-12 bg-white flex flex-col items-center justify-center gap-6 min-h-[300px]">
+        <p className="text-[9px] tracking-[0.4em] text-zinc-300 text-center">
+          ONLINE BOOKING
+        </p>
+        <p className="text-sm font-light text-zinc-500 text-center leading-8">
+          オンライン予約は準備中です。
+          <br />
+          お電話またはお問い合わせフォームから
+          <br />
+          ご連絡ください。
+        </p>
+        <div className="flex flex-col gap-2 text-center">
+          {[
+            { label: "TOKYO", tel: "03-6421-6955" },
+            { label: "KAGAWA", tel: "0879-52-6158" },
+          ].map((o) => (
+            <a
+              key={o.label}
+              href={`tel:${o.tel}`}
+              className="text-[10px] tracking-widest text-zinc-400 hover:text-zinc-900 transition-colors"
+            >
+              {o.label} {o.tel}
+            </a>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className="calendly-inline-widget bg-white border border-zinc-200"
+      data-url={`${CALENDLY_URL}?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=18181b`}
+      style={{ minWidth: "320px", height: "700px" }}
+    />
+  );
+}
 
 const types = ["住宅設計", "店舗設計", "リノベーション", "その他・未定"];
 
@@ -256,12 +310,21 @@ export default function ContactPage() {
                   <br />
                   30分の無料相談です。
                 </p>
+                <ul className="mt-8 space-y-3">
+                  {["初回相談は完全無料", "オンライン（Zoom等）", "30分〜1時間程度"].map(
+                    (item) => (
+                      <li
+                        key={item}
+                        className="flex items-center gap-3 text-[10px] text-zinc-400 font-light tracking-wide"
+                      >
+                        <span className="w-1 h-1 bg-zinc-300 rounded-full shrink-0" />
+                        {item}
+                      </li>
+                    )
+                  )}
+                </ul>
               </div>
-              <div className="border border-zinc-200 aspect-[16/9] flex items-center justify-center bg-white">
-                <p className="text-[9px] text-zinc-300 tracking-[0.4em]">
-                  Calendly 埋め込み予定
-                </p>
-              </div>
+              <CalendlyEmbed />
             </div>
           </div>
         </section>

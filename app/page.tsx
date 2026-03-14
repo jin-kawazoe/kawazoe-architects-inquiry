@@ -116,18 +116,18 @@ export default function Home() {
               <div className="border-t border-zinc-100 md:pl-16" />
             </div>
 
-            <div className="mt-14 flex items-center gap-8">
+            <div className="mt-14 flex flex-col sm:flex-row sm:items-center gap-6">
               <p className="text-xs text-zinc-400 font-light leading-7">
                 ひとつでも当てはまるなら、まずお気軽にご相談ください。
-                <br />
+                <br className="hidden sm:block" />
                 初回相談は無料、まだ検討段階でも大丈夫です。
               </p>
-              <a
+              <Link
                 href="/contact/"
-                className="shrink-0 text-[10px] tracking-[0.3em] bg-zinc-950 text-white px-8 py-3.5 hover:bg-zinc-700 transition-colors"
+                className="shrink-0 text-[10px] tracking-[0.3em] bg-zinc-950 text-white px-8 py-3.5 hover:bg-zinc-700 transition-colors text-center"
               >
                 相談してみる
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -371,28 +371,26 @@ export default function Home() {
                   title: "AK MODEL HOUSE",
                   detail: "香川・さぬき市 / 平屋コートハウス",
                   image: "/images/works/ak-model-house.jpg",
-                  href: "https://www.kawazoe-architects.com/project/house/ak-model-house/ak-model-house.html",
+                  href: "/works/ak-model-house/",
                 },
                 {
                   category: "店舗",
                   title: "BONO CURRY STAND",
                   detail: "香川・庵治 / 工場転用",
                   image: "/images/works/bono-curry-stand.jpg",
-                  href: "https://www.kawazoe-architects.com/project/shop/bono-curry-stand/bono-curry-stand.html",
+                  href: "/works/bono-curry-stand/",
                 },
                 {
                   category: "貸別荘",
                   title: "RELUVILLA",
                   detail: "兵庫・淡路島西海岸",
                   image: "/images/works/reluvilla.jpg",
-                  href: "https://www.kawazoe-architects.com/project/rental-villa/reluvilla/reluvilla.html",
+                  href: "/works/reluvilla/",
                 },
               ].map((work, i) => (
-                <a
+                <Link
                   href={work.href}
                   key={i}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="group block relative overflow-hidden"
                 >
                   <div className="aspect-[3/4] bg-zinc-800 relative overflow-hidden">
@@ -420,7 +418,7 @@ export default function Home() {
                       <span className="text-[10px] tracking-[0.3em] text-white/60">VIEW →</span>
                     </div>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
 

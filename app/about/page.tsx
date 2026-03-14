@@ -1,8 +1,20 @@
+import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CTASection from "../components/CTASection";
 import Link from "next/link";
 import { assetPath } from "../lib/assetPath";
+
+export const metadata: Metadata = {
+  title: "事務所・建築家について | ABOUT",
+  description:
+    "代表建築士・河添甚のプロフィール、受賞歴、設計哲学、東京・香川・高松の拠点情報をご紹介します。",
+  openGraph: {
+    title: "事務所・建築家について | KAWAZOE ARCHITECTS",
+    description:
+      "代表建築士・河添甚のプロフィール、受賞歴、設計哲学。東京・香川・高松の3拠点で全国対応。",
+  },
+};
 
 export default function AboutPage() {
   return (
