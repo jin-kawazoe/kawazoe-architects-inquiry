@@ -81,7 +81,7 @@ export default function AboutPage() {
                   <img
                     src={assetPath("/images/profile/jin-kawazoe.jpg")}
                     alt="河添 甚 | 一級建築士"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover object-center"
                   />
                 </div>
               </div>
