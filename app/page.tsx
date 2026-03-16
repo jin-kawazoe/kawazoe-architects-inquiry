@@ -44,7 +44,7 @@ export default function Home() {
             >
               建てることより、
               <br />
-              <span className="text-white/40">暮らすことを</span>
+              <span className="text-white/40">使われる時間を</span>
               <br />
               考える設計を。
             </h1>
